@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.1",
+        "ezyang/htmlpurifier": "^4.12",
+        "google/cloud-storage": "^1.20"
+    }
+}

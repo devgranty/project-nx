@@ -1,0 +1,25 @@
+runtime: php73
+
+env: standard
+
+runtime_config:
+  document_root: .
+  php_ini_override: php.ini
+
+handlers:
+- url: /assets
+  static_dir: assets
+- url: /favicon\.png
+  static_files: favicon.png
+  upload: favicon\.png
+- url: /robots\.txt
+  static_files: robots.txt
+  upload: robots\.txt
+  
+env_variables:
+  MYSQL_USER: projectn-db
+  MYSQL_PASSWORD: 
+  MYSQL_DSN: "mysql:dbname=;unix_socket=/cloudsql/"
+
+# the default is to serve your app using `public/index.php` or `index.php`
+entrypoint: serve front-controller.php
